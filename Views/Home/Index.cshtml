@@ -1,7 +1,54 @@
 ﻿@model DIS_Models
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="~/css/site.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.js"></script>
+</head>
+<body class="body-content">
+
+    <div class="header">
+        Welcome to my chart!
+    </div>
+    <div class="body-content">
+
+        Name : @Model.firstname @Model.lastname
+        <br />
+        Address : @Model.address.street @Model.address.city
 
 
-    Hello World! <br />
-    Name : @Model.firstname @Model.lastname<br />
-    Address : @Model.address.street @Model.address.city
+        <canvas id="barchartexample" ></canvas>
 
+        <script>
+            new Chart(document.getElementById("barchartexample"), {
+                type: 'bar',
+                data: {
+                    labels: ["Africa", "Asia", "Europe", "Latin America", "North America"],
+                    datasets: [
+                        {
+                            label: "Population (millions)",
+                            backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f", "#e8c3b9", "#c45850"],
+                            data: [2478, 5267, 734, 784, 433]
+                        }
+                    ]
+                },
+                options: {
+                    legend: { display: false },
+                    title: {
+                        display: true,
+                        text: 'Predicted world population (millions) in 2050'
+                    }
+                }
+            });
+        </script>
+
+    </div>
+
+    <div class="footer">
+        Footer goes here
+    </div>
+</body>
+</html>
