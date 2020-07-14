@@ -7,10 +7,10 @@ namespace WebApplication1.Models
 {
     public class DIS_Models
     {
-        public string firstname { get; set; }
-        public string lastname { get; set; }
-
-        public Address address { get; set; }
+        public string name { get; set; }
+        public string address { get; set; }
+        public string cities { get; set; }
+        public string population { get; set; }
     }
     public class Address
     {

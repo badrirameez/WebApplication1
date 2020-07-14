@@ -13,16 +13,15 @@ namespace WebApplication1.Controllers
         public IActionResult Index()
         {
             DIS_Models person = new DIS_Models();
-            person.firstname = "Rameez";
-            person.lastname = "Badri";
-            person.address = new Address();
-            person.address.city = "Brandon";
-            person.address.street = "princeton lakes dr";
+            person.name = "Rameez Badri";
+            person.address = "princeton lakes dr";
             return View(person);
         }
-        public IActionResult ISM6225()
+        [HttpPost]
+        public IActionResult Index(DIS_Models cityPop)
         {
-            return View();
+            return View(cityPop);
         }
+
     }
 }

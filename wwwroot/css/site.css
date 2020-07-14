@@ -1,19 +1,67 @@
 ﻿.body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-color: cornflowerblue;
 }
 
 .header {
     font-size: 30px;
     font-weight: 500;
+    margin: 20px;
     font-style: italic;
     color: cadetblue;
+    animation-name: flash;
+    animation-duration: 0.2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-play-state: running;
 }
 
 .body-content {
     font-size: 20px;
     font-weight: 300;
     font-style: normal;
-    color: aqua;
+    color: chocolate;
+    width: 100%;
+}
+.div {
+    font-size: 20px;
+    font-weight: 300;
+    font-style: normal;
+    color: chocolate;
     width: 50%;
+}
+.blinking {
+    animation: blinkingText 1s infinite;
+    font-family: futura;
+    font-style: italic;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    font-size: 45px;
+    background-color: dodgerblue;
+}
+@keyframes blinkingText {
+
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: .5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+.footer {
+    font-size: 30px;
+    font-weight: 500;
+    margin: 20px;
+    font-style: italic;
+    color: steelblue;
+
 }
